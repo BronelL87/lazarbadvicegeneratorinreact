@@ -1,4 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* unfortunately i am unable to tell if the font is properly showing due to some kind of performance setting on my computer, I am unsure on how to change it */
+/* one issue i ran into is if you click the button enough times it seems to break the site, not sure why but I don't have time to figure it out right now */
 body {
+  background-color: hsl(218, 23%, 16%); /* Dark Grayish Blue */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +16,109 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.advice-box {
+  width: 11/12;
+  max-width: 48rem; 
+  margin-top: 9rem; 
+  margin-bottom: 9rem; 
+  background-color: hsl(217, 19%, 24%); 
+  text-align: center;
+  border-radius: 1rem; 
+}
+
+.advice-id {
+  color: hsl(150, 100%, 66%); 
+  margin-top: 2.25rem; 
+  margin-bottom: 2.25rem; 
+  font-family: manrope; 
+  font-weight: 800; 
+  font-size: 0.75rem; 
+  letter-spacing: 0.1em; 
+}
+
+.advice-text {
+  color: hsl(193, 38%, 86%); 
+  margin-bottom: 1.5rem; 
+  font-family: manrope; 
+  font-weight: 800; 
+  font-size: 1.5rem; 
+  line-height: 1.5; 
+  margin-left: 1.25rem; 
+  margin-right: 1.25rem; 
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.patternBackground {
+  background-image: url(./assets/images/pattern-divider-mobile.svg);
+  width: 100%;
+  height:40px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.action-button {
+  background-color: hsl(150, 100%, 66%); 
+  padding: 1.25rem; 
+  border-radius: 5000px; 
+  position: relative;
+  top: 2rem; 
+  cursor: pointer;
+}
+
+.action-button:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 1px 1px 30px hsl(150, 100%, 66%);
+}
+
+.dice-icon {
+  width: 2rem; /* lg:w-8 */
+}
+
+
+
+.greenBackground{
+  background-color: hsl(150, 100%, 66%); /* Neon Green */
+}
+
+.lightWhite{
+  color: hsl(193, 38%, 86%); /* Light Cyan */
+}
+
+.patternBackground{
+  background-image: url(./assets/images/pattern-divider-mobile.svg);
+  width: 100%;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.customButton:hover{
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 1px 1px 30px hsl(150, 100%, 66%);
+}
+
+@media screen and (min-width: 768px) {      
+  .patternBackground{      
+    background-image: url(./assets/images/pattern-divider-desktop.svg);
+  } 
 }
